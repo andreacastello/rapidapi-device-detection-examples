@@ -20,8 +20,7 @@ func main() {
 
 	url := "https://" + rapidApiHost + "/v2/lookuprequest/json"
 
-	payload := strings.NewReader("{  \"lookup_headers\": {    \"User-Agent\": \"Mozilla/5.0 (Linux; Android 6.0; ASUS_Z017D Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/539.36\"        },  \"requested_caps\": null,  \"requested_vcaps\": null     }")
-
+	payload := strings.NewReader("{\t\"lookup_headers\": {\t\t\"User-Agent\": \"Mozilla/5.0 (Linux; Android 6.0; ASUS_Z017D Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/539.36\",                \"content-Type\": \"application/json\",                \"x-requested-with\":\"XMLHttpRequest\"\t}}")
 	req, _ := http.NewRequest("POST", url, payload)
 
 	req.Header.Add("x-rapidapi-host", rapidApiHost)
