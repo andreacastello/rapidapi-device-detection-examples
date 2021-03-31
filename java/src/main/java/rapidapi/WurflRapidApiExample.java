@@ -54,11 +54,6 @@ public class WurflRapidApiExample {
             out.println("Terminating sample app");
             exit(1);
         }
-
         out.println(response.body());
-
-
     }
-
-
 }
